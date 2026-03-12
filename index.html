@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>A K Barber Shop Northcliff | Professional Cuts for Men, Kids & Ladies</title>
     <meta name="description" content="A K Barber Shop Northcliff – professional haircuts, fades, kids cuts, ladies' styling, and grooming. Near Cresta Shopping Centre, Blackheath.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -210,6 +210,12 @@
             toggle.addEventListener('click', function() {
                 var open = nav.classList.toggle('is-open');
                 toggle.setAttribute('aria-expanded', open);
+            });
+            nav.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('is-open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
             });
         }
     </script>
